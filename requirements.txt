@@ -1,0 +1,17 @@
+# NutriScan Milestone 1 - local dependencies
+# torch/torchvision come from the PyTorch CPU index (see setup_local.sh);
+# this machine has an AMD integrated GPU, so there is no CUDA build to use.
+torch
+torchvision
+transformers>=4.57
+pillow
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+scikit-learn
+tqdm
+ipywidgets
+jupyterlab
+nbconvert

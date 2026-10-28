@@ -1,0 +1,16 @@
+# Generated artifacts (figures, zips, persisted metadata) - regenerate from the notebook
+outputs/
+
+# Jupyter
+.ipynb_checkpoints/
+Untitled.ipynb
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store

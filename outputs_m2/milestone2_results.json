@@ -1,0 +1,199 @@
+{
+  "best_model": "mobilenet_finetune",
+  "img_size": 96,
+  "classes": [
+    "apple_pie",
+    "chocolate_cake",
+    "donuts",
+    "falafel",
+    "french_fries",
+    "hot_dog",
+    "ice_cream",
+    "nachos",
+    "onion_rings",
+    "pancakes",
+    "pizza",
+    "ravioli",
+    "samosa",
+    "spring_rolls",
+    "strawberry_shortcake",
+    "tacos",
+    "waffles"
+  ],
+  "test_acc": 0.44140625,
+  "test_macro_f1": 0.4377551865957608,
+  "test_top3": 0.66015625,
+  "n_train": 1189,
+  "n_val": 255,
+  "n_test": 256,
+  "comparison": {
+    "base_cnn": {
+      "description": "Plain 3-block CNN, no augmentation / regularisation",
+      "val_acc": 0.1568627450980392,
+      "val_macro_f1": 0.13855942119633802,
+      "val_top3": 0.35294117647058826,
+      "train_acc": 0.27586206896551724,
+      "gap": 0.11899932386747802,
+      "best_epoch": 6.0,
+      "params_M": 0.622161,
+      "trainable_M": 0.622161,
+      "size_MB": 2.488644,
+      "latency_ms": 2.8150558471679688,
+      "train_time_s": 75.53503942489624
+    },
+    "cnn_aug_reg": {
+      "description": "4-block CNN + BatchNorm + dropout + weight decay + augmentation",
+      "val_acc": 0.14901960784313725,
+      "val_macro_f1": 0.11827728970337595,
+      "val_top3": 0.3568627450980392,
+      "train_acc": 0.17830109335576114,
+      "gap": 0.029281485512623884,
+      "best_epoch": 8.0,
+      "params_M": 0.296193,
+      "trainable_M": 0.296193,
+      "size_MB": 1.184772,
+      "latency_ms": 4.527854919433594,
+      "train_time_s": 141.6110861301422
+    },
+    "mobilenet_frozen": {
+      "description": "MobileNetV2 (ImageNet), frozen backbone, new head + augmentation",
+      "val_acc": 0.3568627450980392,
+      "val_macro_f1": 0.3477871794539707,
+      "val_top3": 0.6274509803921569,
+      "train_acc": 0.3675357443229605,
+      "gap": 0.010672999224921265,
+      "best_epoch": 3.0,
+      "params_M": 2.245649,
+      "trainable_M": 0.021777,
+      "size_MB": 8.982596,
+      "latency_ms": 11.026740074157715,
+      "train_time_s": 38.3411066532135
+    },
+    "mobilenet_finetune": {
+      "description": "MobileNetV2, last 5 blocks fine-tuned (discriminative LR) + augmentation",
+      "val_acc": 0.44313725490196076,
+      "val_macro_f1": 0.4256781543006504,
+      "val_top3": 0.6823529411764706,
+      "train_acc": 0.479394449116905,
+      "gap": 0.03625719421494422,
+      "best_epoch": 3.0,
+      "params_M": 2.245649,
+      "trainable_M": 1.703121,
+      "size_MB": 8.982596,
+      "latency_ms": 17.071402072906494,
+      "train_time_s": 36.604209661483765
+    },
+    "effnet_finetune": {
+      "description": "EfficientNet-B0, last 3 blocks fine-tuned + augmentation",
+      "val_acc": 0.3607843137254902,
+      "val_macro_f1": 0.3343087547033785,
+      "val_top3": 0.6352941176470588,
+      "train_acc": 0.41042893187552565,
+      "gap": 0.04964461815003546,
+      "best_epoch": 3.0,
+      "params_M": 4.029325,
+      "trainable_M": 3.177517,
+      "size_MB": 16.1173,
+      "latency_ms": 31.95731639862061,
+      "train_time_s": 74.77186703681946
+    }
+  },
+  "per_class_f1": {
+    "nachos": 0.261,
+    "apple_pie": 0.286,
+    "onion_rings": 0.308,
+    "waffles": 0.311,
+    "donuts": 0.357,
+    "spring_rolls": 0.364,
+    "tacos": 0.368,
+    "hot_dog": 0.37,
+    "falafel": 0.429,
+    "pancakes": 0.453,
+    "ravioli": 0.455,
+    "strawberry_shortcake": 0.455,
+    "samosa": 0.5,
+    "chocolate_cake": 0.588,
+    "ice_cream": 0.593,
+    "pizza": 0.643,
+    "french_fries": 0.703
+  },
+  "confused_pairs": [
+    {
+      "true": "falafel",
+      "predicted": "tacos",
+      "count": 5
+    },
+    {
+      "true": "apple_pie",
+      "predicted": "pancakes",
+      "count": 4
+    },
+    {
+      "true": "nachos",
+      "predicted": "tacos",
+      "count": 4
+    },
+    {
+      "true": "spring_rolls",
+      "predicted": "pancakes",
+      "count": 4
+    },
+    {
+      "true": "nachos",
+      "predicted": "waffles",
+      "count": 4
+    },
+    {
+      "true": "donuts",
+      "predicted": "pancakes",
+      "count": 3
+    },
+    {
+      "true": "hot_dog",
+      "predicted": "waffles",
+      "count": 3
+    },
+    {
+      "true": "donuts",
+      "predicted": "onion_rings",
+      "count": 3
+    }
+  ],
+  "samples": [
+    {
+      "true": "chocolate_cake",
+      "pred": "chocolate_cake",
+      "confidence": 0.338,
+      "second": "pancakes",
+      "third": "donuts"
+    },
+    {
+      "true": "samosa",
+      "pred": "samosa",
+      "confidence": 0.569,
+      "second": "french_fries",
+      "third": "spring_rolls"
+    },
+    {
+      "true": "nachos",
+      "pred": "tacos",
+      "confidence": 0.291,
+      "second": "nachos",
+      "third": "pizza"
+    }
+  ],
+  "conf_coverage": {
+    "0.5": {
+      "coverage": 0.1484375,
+      "acc": 0.8421052631578947
+    },
+    "0.7": {
+      "coverage": 0.0859375,
+      "acc": 0.8636363636363636
+    },
+    "0.9": {
+      "coverage": 0.0390625,
+      "acc": 0.9
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[NbConvertApp] Converting notebook NutriScan_Milestone2.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 1774131 bytes to NutriScan_Milestone2.ipynb
+[NbConvertApp] Converting notebook NutriScan_Milestone2.ipynb to html
+[NbConvertApp] WARNING | Alternative text is missing on 9 image(s).
+[NbConvertApp] Writing 2193624 bytes to NutriScan_Milestone2.html
